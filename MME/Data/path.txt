@@ -1,0 +1,3 @@
+/home/jacopo/Desktop/SCBIO/TFNet/Data/ecolialon
+
+/home/jacopo/Desktop/SCBIO/TFNet/Data/Celegans
