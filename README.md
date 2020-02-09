@@ -1,32 +1,17 @@
-RUN COMMAND (Ubuntu 18.04):
+Matching-Enrichment
 
-g++ -std=c++11 mainX.cpp -larmadillo -o out
+This is a personal project. It creates directed graphs from real data [1], [2] and finds their maximum matching with Hopcroft–Karp algorithm [3]. Once that matched/ unmatched nodes are found they are labelled according to their status. The interest in finding unmatched nodes in complex networks comes from an application of structural control theory to complex networks [4]. Unmatched nodes percentage in E. Coli transcription factors network is reproduced, according to [5]. An enrichment experiment is included, in order to estimate matched nodes subset cardinality deviation from a null model, an Erdos-Renyi network. The maximum matching pattern is strongly enriched in real networks (~34 standard deviations). A python visualization tool is integrated in the c++ code, allowing an easier interpretation of results. Some instructions for software usage can be found in the README file.
 
 DEPENDENCIES:
 
-c++ : armadillo
-http://arma.sourceforge.net/
+c++ : armadillo, http://arma.sourceforge.net/
 
-python: numpy, matplotlib, networkx
-https://networkx.github.io/
+python: numpy, matplotlib, networkx https://networkx.github.io/
 
-Pay attention to: 
+REFERENCES:
 
-1) before running the program modify the file:
-MME/DataVisualization/netvis.cpp
-updating the variable 'visualization_path' to fit with your directories system.
-
-2) whet you save random networks their labels will allways start from 0 this will allow you to correctly visualize the net
-
-E COLI PATH, DATA SOURCE ( main1 )
-
-http://www.weizmann.ac.il/mcb/UriAlon/e-coli-transcription-network
-
-
-C ELEGANS PATH, DATA SOURCE ( main2 )
-
-https://snap.stanford.edu/data/C-elegans-frontal.html
-
-
-ECOLI NET 2
-https://www.inetbio.org/ecolinet/downloadnetwork.php
+[1] http://www.weizmann.ac.il/mcb/UriAlon/e-coli-transcription-network 
+[2] https://snap.stanford.edu/data/C-elegans-frontal.html
+[3] https://www.geeksforgeeks.org/hopcroft-karp-algorithm-for-maximum-matching-set-2-implementation/ 
+[4] https://arxiv.org/pdf/1508.05384.pdf 
+[5] https://arxiv.org/pdf/1703.00876.pdf
